@@ -54,7 +54,7 @@ int write_history(info_t *info)
 }
 
 /**
- * read_history - reads history from file
+ *  read_history - reads history from file
  * @info: the parameter struct
  *
  * Return: histcount on success, 0 otherwise
