@@ -57,7 +57,7 @@ int _mysetenv(info_t *info)
  * _myunsetenv - Remove an environment variable
  * @info: Structure containing potential arguments. to be Used to maintain
  *        constant function prototype.
- * Return: Always 0 success 
+ * Return: Always 0 success
  */
 int _myunsetenv(info_t *info)
 {
@@ -68,7 +68,7 @@ int _myunsetenv(info_t *info)
 		_eputs("Too few arguements.\n");
 		return (1);
 	}
-	for (x = 1; i <= info->argc; i++)
+	for (x = 1; x <= info->argc; x++)
 		_unsetenv(info, info->argv[x]);
 
 	return (0);

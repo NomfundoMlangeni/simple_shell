@@ -34,7 +34,7 @@ int _eputchar(char c)
 	if (c == BUF_FLUSH || x >= WRITE_BUF_SIZE)
 	{
 		write(2, buf, x);
-		i = 0;
+		x = 0;
 	}
 	if (c != BUF_FLUSH)
 		buf[x++] = c;
@@ -69,17 +69,17 @@ int _putfd(char c, int fd)
  * @str: the string to be printed
  * @fd: the filedescriptor to write to
  *
- * Return: the number of chars 
+ * Return: the number of chars
  */
 int _putsfd(char *str, int fd)
 {
-	int x = 0;
+	int n = 0;
 
 	if (!str)
 		return (0);
 	while (*str)
 	{
-		x += _putfd(*str++, fd);
+		n += _putfd(*str++, fd);
 	}
-	return (i);
+	return (n);
 }
